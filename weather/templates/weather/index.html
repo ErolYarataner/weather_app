@@ -6,11 +6,12 @@
     <title> Weather </title>
 </head>
 <body>
+    {% for city_weather in weather_data %}
     <h1>How is the weather in {{ city_weather.city }}?</h1>
 
     <h2> Temperature in {{ city_weather.city }} is {{ city_weather.temperature }} degrees </h2>
     <h3> {{ city_weather.description }} </h3>
     <img src="http://openweathermap.org/img/wn/{{ city_weather.icon }}@2x.png" alt="">
-    
+    {% endfor %}
 </body>
 </html>

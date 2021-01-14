@@ -6,6 +6,11 @@
     <title> Weather </title>
 </head>
 <body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}
+        <input type="submit" value="Add city">
+    </form>
     {% for city_weather in weather_data %}
     <h1>How is the weather in {{ city_weather.city }}?</h1>
 
